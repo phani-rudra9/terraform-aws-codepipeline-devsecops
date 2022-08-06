@@ -22,7 +22,10 @@ pipeline {
         stage('Terraform Initialize'){
            steps {
             //   sh 'terraform init -var-file="./env/${Environment}.tfvars"'
-            sh 'terraform init'
+            sh '''
+            export PATH=/usr/local/bin:$PATH
+            terraform init
+            '''
            }
         }
         stage('Select Workspace'){ 
