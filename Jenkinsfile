@@ -7,6 +7,9 @@ pipeline {
     //     choice(name: 'TERRAFORM_ACTION', choices: ['apply' , 'destroy'],  description: 'Do You Want to Apply or Destroy?')
     //     string(name: 'Branch', defaultValue: 'master', description: 'Enter Branch Name to Run')
     // }
+    environment {
+        PATH = "/usr/local/bin:$PATH"
+    }
 
     stages {
 //         stage('CleanWorkspace'){
