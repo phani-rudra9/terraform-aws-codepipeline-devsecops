@@ -9,6 +9,9 @@ pipeline {
     // }
     environment {
         PATH = "/usr/local/bin:$PATH"
+        export AWS_ACCESS_KEY_ID=$access_key
+        export AWS_SECRET_ACCESS_KEY=$secret_access_key
+        export AWS_DEFAULT_REGION=$aws_region
     }
 
     stages {
