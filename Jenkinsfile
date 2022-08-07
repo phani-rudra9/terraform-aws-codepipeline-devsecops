@@ -9,6 +9,8 @@ pipeline {
     // }
     environment {
         PATH = "/usr/local/bin:$PATH"
+        AWS_ACCESS_KEY_ID = "$access_key"
+        AWS_SECRET_ACCESS_KEY = "$secret_access_key"
     }
 
     stages {
