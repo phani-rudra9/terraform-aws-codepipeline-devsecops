@@ -48,7 +48,7 @@ pipeline {
             //     expression { params.TERRAFORM_ACTION == 'apply' && params.RUN_PLAN_ONLY == false}
             // }
             steps {
-              sh 'terraform apply outputs.json -auto-approve'
+              sh 'terraform apply outputs.json'
             }    
         }
         // stage('Terraform Destroy') {
